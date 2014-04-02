@@ -49,7 +49,7 @@ $(document).ready(function() {
 			$(this).attr('placeholder',$(this).data('holder'));
 		});
 	});
-	$('.intro .nav > div > ul > li').has('div').hover(
+	$('.intro .nav > div > ul > li, .lb .nav > div > ul > li').has('div').hover(
 		function() {
 			$(this).parents('.nav').addClass('hover');
 			$(this).addClass('active');
@@ -108,7 +108,67 @@ $(document).ready(function() {
 		return false;
 	}).filter(':first').click();
 	$('.intro .nav ul li > div > div').css({'min-height': minintronav+'px'});
-	$('.intro .nav ul li > div > div')
+	$('.modal').append('<span class="close"></span>');
+	$('.modal').each(function() {
+		var mh = ($(this).height()+44)/2;
+		$(this).css({'margin-top': -mh+'px'});
+	});
+	var bt = 0;
+	$('.products button.order').bind('click', function() {
+		$('#callorder, .fade').fadeIn(150);
+		bt = $('body').scrollTop();
+		$('body').css({'position': 'fixed', 'top': -bt+'px', 'overflow-y': 'scroll'});
+		return false;
+	});
+	$('.modal .close').bind('click', function() {
+		$(this).parent().fadeOut(150);
+		$('.fade').fadeOut(150);
+		$('body').css({'position': 'static', 'top': '0', 'overflow-y': 'auto'});
+		$('body').scrollTop(bt);
+		return false;
+	});
+	$('.fade').bind('click', function() {
+		$('.fade, div.modal').fadeOut(150);
+		$('body').css({'position': 'static', 'top': '0', 'overflow-y': 'auto'});
+		$('body').scrollTop(bt);
+		return false;
+	});
+	$(this).keydown(function(eventObject){
+		if (eventObject.which == 27) {
+			$('.fade, div.modal').fadeOut(150);
+			$('body').css({'position': 'static', 'top': '0', 'overflow-y': 'auto'});
+			$('body').scrollTop(bt);
+		}
+	});
+	$('.header .basket > div').append('<span></span>');
+	$('.header .basket').hover(
+		function() {
+			$(this).children('div').stop(true, true).fadeIn(150);
+		},
+		function() {
+			$(this).children('div').stop(true, true).fadeOut(150);
+		}
+	);	
+	$('.plus').click(function () {
+		var $input = $(this).parent().find('input');
+		var count = parseInt($input.val()) - 1;
+		count = count < 1 ? 1 : count;
+		$input.val(count);
+		$input.change();
+		return false;
+	});
+	$('.minus').click(function () {
+		var $input = $(this).parent().find('input');
+		$input.val(parseInt($input.val()) + 1);
+		$input.change();
+		return false;
+	});
+	$('.content .order > div ul li a').click(function() {
+		$(this).addClass('active');
+		$(this).parent().siblings().find('a').removeClass('active');
+		return false;
+	});
 	$('.menu li:last-child, .footer li:last-child').css({'margin-right': '-10px'});
+	$('.header .basket table td:last-child').css({'text-align': 'right'});
 	$('.catalog > div > div > div:nth-child(4n), .products > div:nth-child(3n), .similar > div > div:nth-child(4n)').css({'margin-right': '-3px'});
 });
