@@ -2366,8 +2366,6 @@ button::-moz-focus-inner {
 .content .order > div ul li a:hover p, .content .order > div ul li a.active p {
 	text-decoration:underline;
 }
-
-
 .rb .search {
 	margin:39px 0 51px;
 }
@@ -2434,6 +2432,40 @@ button::-moz-focus-inner {
 	line-height:19px;
 	font-weight:300;
 	margin:0;
+}
+.content .reviews {
+	margin:28px 0 52px;
+}
+.content .reviews > div {
+	margin:0 0 23px;
+}
+.content .reviews > div > div {
+	padding:0 0 35px;
+	background:url('../img/content_reviews_b.png') no-repeat left bottom;
+}
+.content .reviews > div > div > div {
+	padding:29px 0 0;
+	background:url('../img/content_reviews_t.png') no-repeat left top;
+}
+.content .reviews > div > div > div > div {
+	padding:1px 32px;
+	background:url('../img/content_reviews_bg.png') repeat-y left;
+}
+.content .reviews > div > div > div > div p {
+	color:#203b4c;
+	font-size:13px;
+	line-height:22px;
+	font-weight:300;
+	margin:-15px 0 -12px;
+}
+.content .reviews > div h5 {
+	color:#203b4c;
+	font-size:13px;
+	line-height:18px;
+	font-weight:300;
+	text-transform:uppercase;
+	padding:0;
+	margin:-1px 0 0 54px;
 }
 
 /* Footer */
@@ -2505,7 +2537,7 @@ div.clear {
 .footer .social {
 	position:absolute;
 	left:50%;
-	top:45px;
+	top:46px;
 	width:480px;
 	text-align:center;
 	margin:0 0 0 -240px;
@@ -2513,19 +2545,24 @@ div.clear {
 .footer .social li {
 	position:relative;
 	display:inline-block;
-	width:24px;
-	height:24px;
 	margin:0 1px 0 0;
 }
-.footer .social li img {
-	position:absolute;
-	top:0;
-	right:0;
-	bottom:0;
-	left:0;
-	max-width:24px;
-	max-height:24px;
-	margin:auto;
+.footer .social li a {
+	display:block;
+	width:23px;
+	height:23px;
+}
+.footer .social li .vkontakte {
+	background:url('../img/social_vkontakte_icon.png') no-repeat left top;
+}
+.footer .social li .facebook {
+	background:url('../img/social_facebook_icon.png') no-repeat left top;
+}
+.footer .social li .twitter {
+	background:url('../img/social_twitter_icon.png') no-repeat left top;
+}
+.footer .social li a:hover {
+	background-position:0 -23px;
 }
 
 /* Range slider */
