@@ -567,7 +567,13 @@ button::-moz-focus-inner {
 	width:710px;
 	height:363px;
 }
-.intro .slider .container > div > div > div {
+.intro .slider .container > div > div > a {
+	display:block;
+	width:710px;
+	height:363px;
+	text-decoration:none;
+}
+.intro .slider .container > div > div > a > div {
 	position:absolute;
 	left:0;
 	top:60px;
@@ -576,7 +582,7 @@ button::-moz-focus-inner {
 	height:240px;
 	background:url('../img/slider_opacity.png') repeat;
 }
-.intro .slider .container > div > div > div > div {
+.intro .slider .container > div > div > a > div > div {
 	position:absolute;
 	left:50%;
 	top:50%;
@@ -584,7 +590,7 @@ button::-moz-focus-inner {
 	text-align:center;
 	margin:-58px 0 0 -240px;
 }
-.intro .slider .container > div > div > div > div h5 {
+.intro .slider .container > div > div > a > div > div h5 {
 	display:inline-block;
 	font-size:30px;
 	line-height:33px;
@@ -594,21 +600,21 @@ button::-moz-focus-inner {
 	margin:0 0 20px;
 	border-top:1px solid #253002;
 }
-.intro .slider .container > div > div > div > div h3 {
+.intro .slider .container > div > div > a > div > div h3 {
 	font-size:26px;
 	line-height:29px;
 	font-weight:600;
 	padding:0;
 	margin:0 0 8px;
 }
-.intro .slider .container > div > div > div > div p {
+.intro .slider .container > div > div > a > div > div p {
 	font-size:15px;
 	line-height:18px;
 	font-style:italic;
 	text-transform:uppercase;
 	margin:0;
 }
-.intro .slider .container > div > div > div > div p span {
+.intro .slider .container > div > div > a > div > div p span {
 	text-decoration:line-through;
 	padding:0 30px 0 0;
 }
