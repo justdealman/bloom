@@ -2473,6 +2473,52 @@ button::-moz-focus-inner {
 	padding:0;
 	margin:-1px 0 0 54px;
 }
+.rb .benefits {
+	position:relative;
+	width:740px;
+	padding:24px 0 12px;
+	margin:-13px 0 -20px;
+	background:url('../img/main_bg.png') repeat;
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+	border-radius:5px;
+	behavior:url('./pie.htc');
+}
+.rb .benefits li {
+	display:inline-block;
+	width:240px;
+	color:#203b4c;
+	font-size:12px;
+	line-height:19px;
+	font-weight:600;
+	text-transform:uppercase;
+	margin:0 1px 17px 78px;
+}
+.rb .benefits li div {
+	position:relative;
+	display:inline-block;
+	width:66px;
+	height:52px;
+	vertical-align:middle;
+	margin:0 11px 0 0;
+}
+.rb .benefits li div img {
+	position:absolute;
+	top:0;
+	right:0;
+	bottom:0;
+	left:0;
+	max-width:66px;
+	max-height:52px;
+	margin:auto;
+}
+.rb .benefits li span {
+	display:inline-block;
+	min-height:38px;
+	width:156px;
+	margin:12px -3px 0 0;
+	vertical-align:middle;
+}
 
 /* Footer */
 
